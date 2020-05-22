@@ -10,16 +10,15 @@ import java.awt.*;
  *
  * @author Ebrahem hesham
  */
-public class RESTAURANTTEST {
+public class RESTAURANTTEST{
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-        restaurantFrame rest_frame = new restaurantFrame();
-        rest_frame.createComponent();
-        
+       Restaurantframe f1 = new Restaurantframe();
+       
+       
     }
     
 }
