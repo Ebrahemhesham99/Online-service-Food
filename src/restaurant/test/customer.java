@@ -8,7 +8,7 @@ package restaurant.test;
 
 import java.util.ArrayList;
 import java.util.List;
-import  restaurant.test.DBmanager;
+import restaurant.test.DBmanager;
 
 /**
  *
@@ -35,9 +35,40 @@ public class customer {
      
      }
 
-    private  customer(){}
+    public String getUsername() {
+        return username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getPhone_no() {
+        return phone_no;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public int getID() {
+        return ID;
+    }
+
+    public DBmanager getDbManager() {
+        return dbManager;
+    }
+
     
-    
+
     
 }
 
