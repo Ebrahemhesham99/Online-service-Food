@@ -75,7 +75,32 @@ public  class  DBmanager {
     }
 
     
-    
+    public ArrayList<String> findCST(int id){
+        ArrayList<String> customer = new ArrayList<>();
+        try{
+            query = "SELECT * FROM cst WHERE cst_id  = " + id ;
+            resultSet = statement.executeQuery(query);
+            while (resultSet.next()) {
+                String  username = resultSet.getString("cst_username");
+                String password = resultSet.getString("cst_password");
+                String gender = resultSet.getString("cst_gender");
+                String age = resultSet.getString("cst_age");
+                String email = resultSet.getString("cst_email");
+                String phone_no = resultSet.getString("cst_phone_no");
+
+                customer.add(username);
+                customer.add(password);
+                customer.add(gender);
+                customer.add(age);
+                customer.add(email);
+                customer.add(phone_no);
+            }
+        }catch (Exception ex) {
+            System.out.println(ex);
+        }
+        return customer;
+    }
+
     
     
     
