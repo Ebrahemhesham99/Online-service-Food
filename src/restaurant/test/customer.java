@@ -68,7 +68,24 @@ public class customer {
     }
 
     
+private  customer(){}
+    
+    public boolean logIn(String email, String password){
+        int id = dbManager.getCSTID(email,password);
+        if(id != 0){
+            ArrayList<String> object = dbManager.findCST(id);
+            this.username = object.get(0);
+            this.password = object.get(1);
+            this.gender = object.get(2);
+            this.age = Integer.parseInt(object.get(3));
+            this.email = object.get(4);
+            this.phone_no = object.get(5);
+            this.ID = id;
 
+            return true;
+        }
+        return false;
+    }
     
 }
 
