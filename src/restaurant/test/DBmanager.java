@@ -1,4 +1,4 @@
-package sw2_project;
+package restaurant.test;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
