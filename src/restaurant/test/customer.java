@@ -69,6 +69,27 @@ public class customer {
 
     
 private  customer(){}
+
+ public String register(String username, String password, String email, String phone_no, String gender, int age){
+        String validation = chechValidatetion(username,password,email,phone_no);
+
+        if(!validation.equals("validate"))
+            return validation;
+
+        this.username = username;
+        this.password = password;
+        this.email = email;
+        this.phone_no = phone_no;
+        this.gender = gender;
+        this.age = age;
+
+        if(dbManager.addCustomer(this)) {
+            this.ID = dbManager.getCSTID(email,password);
+            return "true";
+        }
+        else
+            return "false";
+    }
     
     public boolean logIn(String email, String password){
         int id = dbManager.getCSTID(email,password);
