@@ -57,6 +57,28 @@ public  class  DBmanager {
 
         return false;
     }
+
+      public boolean checkEmail(String email){
+        String temp = "'"+email+"'";
+        try {
+            String em = null;
+            query = "SELECT cst_email FROM cst WHERE cst_email = " + temp;
+            resultSet = statement.executeQuery(query);
+            while (resultSet.next()){
+                em = resultSet.getString("cst_email");
+                System.out.println(em);
+            }
+
+            if (em != null)
+                return true;
+
+        }catch (Exception e){
+            System.out.println(e);
+        }
+        return false;
+    }
+
+
     public int getCSTID(String email, String password){
         String temp_email = "'" + email + "'";
         String temp_pass = "'" + password + "'";
