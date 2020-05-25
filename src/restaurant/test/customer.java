@@ -108,6 +108,24 @@ private  customer(){}
         }
         return false;
     }
+     private String chechValidatetion(String username, String password, String email, String phone_no){
+        String passwordvalidation = passwordValidation(username,password);
+
+        if (dbManager.checkEmail(email)){
+            return "Email is exsit befor, please use anthor email ";
+        }
+
+        if(!passwordvalidation.equals("Password is valid.")){
+            return passwordvalidation;
+        }
+
+
+        if (phone_no.length() != 11) {
+            return "Please enter validate phone number";
+        }
+
+        return "validate";
+    }
     private String passwordValidation(String userName, String password)
     {
         if (password.length() < 8) {
