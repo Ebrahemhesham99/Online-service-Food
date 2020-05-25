@@ -73,6 +73,7 @@ private  customer(){}
  public String register(String username, String password, String email, String phone_no, String gender, int age){
         String validation = chechValidatetion(username,password,email,phone_no);
 
+            
         if(!validation.equals("validate"))
             return validation;
 
