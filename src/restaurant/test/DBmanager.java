@@ -100,11 +100,31 @@ public  class  DBmanager {
         }
         return customer;
     }
-
+   public boolean update_cst_profile(String username, String password, String email, String phone_no, String gender, int age, int id){
+    String name_t = "'" + username + "'";
+        String password_t = "'" + password + "'";
+        String gender_t = "'" + gender+ "'";
+        int age_t = age;
+        String phone_t = "'" + phone_no + "'";
+        String email_t = "'" + email + "'";
+    try{
+     query = "UPDATE cst SET cst_gender ="+gender_t+",cst_age="+age_t+",cst_email="+email_t+",cst_phone_no= "+phone_t+",cst_password="+password_t+",cst_username="+name_t+
+" WHERE cst_id=" + id;
+     System.out.println(query);
+        statement.execute(query);
+        return true;
+     }catch (Exception e) {
+            System.out.println(e);
+        }
+        return false;   
     
-    
+ 
+   }
     
     }
+    
+    
+   
     
     
    
