@@ -107,6 +107,34 @@ private  customer(){}
         }
         return false;
     }
+    private String passwordValidation(String userName, String password)
+    {
+        if (password.length() < 8) {
+            return "Password should be more than 8 characters in length.";
+        }
+        if (password.indexOf(userName) > -1) {
+            return "Password Should not be same as user name";
+        }
+        String upperCaseChars = "(.*[A-Z].*)";
+        if (!password.matches(upperCaseChars )) {
+            return "Password should contain atleast one upper case alphabet";
+        }
+        String lowerCaseChars = "(.*[a-z].*)";
+        if (!password.matches(lowerCaseChars )) {
+            return "Password should contain atleast one lower case alphabet";
+        }
+        String numbers = "(.*[0-9].*)";
+        if (!password.matches(numbers )) {
+            return "Password should contain atleast one number.";
+        }
+        String specialChars = "(.*[,~,!,@,#,$,%,^,&,*,(,),-,_,=,+,[,{,],},|,;,:,<,>,/,?].*$)";
+        if (!password.matches(specialChars )) {
+            return "Password should contain atleast one special character";
+        }
+
+        this.password = password;
+        return "Password is valid.";
+    }
     
 }
 
