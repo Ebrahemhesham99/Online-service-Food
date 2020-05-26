@@ -154,6 +154,15 @@ private  customer(){}
         this.password = password;
         return "Password is valid.";
     }
+    public boolean update_profile(String username, String password, String email, String phone_no, String gender, int age){
+    
+    System.out.println(this.getID());
+  boolean done=dbManager.update_cst_profile(username,password,email,phone_no,gender,age,this.getID());
+    
+    
+     return done;
+    }
+
     
 }
 
