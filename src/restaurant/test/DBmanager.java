@@ -57,6 +57,27 @@ public  class  DBmanager {
 
         return false;
     }
+ 
+ 
+ public boolean add_item(String name, String price){
+    
+      String it_name = "'" +name + "'";
+        String it_price = "'" + price+ "'";
+    
+    
+    try{
+    query = "insert into items(item_name,item_price) values ("+it_name+","+it_price+")";
+     statement.execute(query);
+   return true;
+    
+    }
+    catch(Exception e){
+    System.out.println(e);
+    }
+    
+    return false;
+    
+  }
 
       public boolean checkEmail(String email){
         String temp = "'"+email+"'";
