@@ -77,7 +77,18 @@ public  class  DBmanager {
         }
         return false;
     }
-
+public String getItemName(int item_code){
+        String name = null;
+        try{
+            query = "SELECT item_name FROM items where item_id = " + item_code;
+            resultSet = statement.executeQuery(query);
+            while (resultSet.next())
+                name = resultSet.getString("item_name");
+        }catch (Exception e) {
+            System.out.println(e);
+        }
+        return name;
+    }
 
     public int getCSTID(String email, String password){
         String temp_email = "'" + email + "'";
