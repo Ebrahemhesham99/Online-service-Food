@@ -166,12 +166,23 @@ public String getItemName(int item_code){
     System.out.println(e);
     }
     
-    return false;
-   
-   
-   
+    return false;  
    
    } 
+    public String getItemId(String nameٍ){
+        String id =null ;
+        String temp = "'" + nameٍ + "'";
+        try{
+            query = "SELECT item_price FROM items where item_name =" + temp;
+            resultSet = statement.executeQuery(query);
+            while (resultSet.next())
+                id = resultSet.getString("item_id");
+                 
+        }catch (Exception e) {
+            System.out.println(e);
+        }
+        return id;
+    }
     
     }
     
