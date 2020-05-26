@@ -153,6 +153,25 @@ public String getItemName(int item_code){
     
  
    }
+    public boolean del_item(String name){
+   
+   String it_name = "'" +name + "'";
+   try{
+    query = "delete from items where item_name= "+it_name;
+     statement.execute(query);
+   return true;
+    
+    }
+    catch(Exception e){
+    System.out.println(e);
+    }
+    
+    return false;
+   
+   
+   
+   
+   } 
     
     }
     
