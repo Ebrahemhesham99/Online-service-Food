@@ -35,6 +35,20 @@ public  class  DBmanager {
     }
 
     
+    public String getItemPrice(String nameٍ){
+        String price = null;
+        String temp = "'" + nameٍ + "'";
+        try{
+            query = "SELECT item_price FROM items where item_name =" + temp;
+            resultSet = statement.executeQuery(query);
+            while (resultSet.next())
+                price = resultSet.getString("item_price");
+                 
+        }catch (Exception e) {
+            System.out.println(e);
+        }
+        return price;
+    }
  public boolean addCustomer(customer customer){
         String name = "'" + customer.getUsername() + "'";
         String password = "'" + customer.getPassword() + "'";
