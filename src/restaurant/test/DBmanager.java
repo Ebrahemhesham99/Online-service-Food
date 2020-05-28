@@ -218,24 +218,24 @@ public String getItemName(int item_code){
         }
         return id;
     }
-     public List<Item> getMenu()
-    {
-     List<Item> menu = new ArrayList<>();
-   
-     try {
-         query = "SELECT * FROM items ";
-         resultSet = statement.executeQuery(query);
-         while (resultSet.next())
-         {
-             menu.add(new Item( resultSet.getString("item_name"),
-                     resultSet.getString("item_price")));
-         }
-     }catch (Exception e){
-         System.out.println(e);
-     }
-      System.out.println(menu.size());
-        return menu;
-    }
+//     public List<Item> getMenu()
+//    {
+//     List<Item> menu = new ArrayList<>();
+//   
+//     try {
+//         query = "SELECT * FROM items ";
+//         resultSet = statement.executeQuery(query);
+//         while (resultSet.next())
+//         {
+//             menu.add(new Item( resultSet.getString("item_name"),
+//                     resultSet.getString("item_price")));
+//         }
+//     }catch (Exception e){
+//         System.out.println(e);
+//     }
+//      System.out.println(menu.size());
+//        return menu;
+//    }
     
      public boolean update_item(String item_name , String item_price, String id){
         String it_name = "'" + item_name + "'";

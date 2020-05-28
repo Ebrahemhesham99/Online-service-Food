@@ -16,8 +16,7 @@ public class RESTAURANTTEST{
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-       Restaurantframe f1 = new Restaurantframe();
-       
+      
        
     }
     
