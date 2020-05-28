@@ -1,6 +1,10 @@
+package gui;
 
+
+import gui.RegisterForm;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import restaurant.test.customer;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -257,18 +261,13 @@ public class LogForm extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel4MouseClicked
 
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
-       CST log = new CST();
+       customer log = new customer();
       if(log.logIn(jTextField1.getText(), jPasswordField1.getText())==false){
       
        JOptionPane.showMessageDialog(null,"wrong username or password");
       }else {
       
-       SearchLocation sr = new SearchLocation();
-        sr.setVisible(true);
-        sr.pack();
-        sr.setLocationRelativeTo(null);
-        sr.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.dispose();
+       JOptionPane.showMessageDialog(null,"you logged in as a customer!");
       
       
       } ;
@@ -298,13 +297,13 @@ public class LogForm extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(registerform.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RegisterForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(registerform.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RegisterForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(registerform.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RegisterForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(registerform.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RegisterForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
