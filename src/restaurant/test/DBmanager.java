@@ -237,6 +237,29 @@ public String getItemName(int item_code){
         return menu;
     }
     
+     public boolean update_item(String item_name , String item_price, String id){
+        String it_name = "'" + item_name + "'";
+        String it_price = "'" + item_price+ "'";
+        String it_id = "'" + id + "'";
+
+        
+        
+    try{
+    query = "update items set item_name ="+it_name+", item_price="+it_price+" where item_id ="+ it_id;
+     statement.execute(query);
+   return true;
+    
+    }
+    catch(Exception e){
+    System.out.println(e);
+    }
+    
+    return false;
+    
+    
+    
+    
+    }
     
     }
     
