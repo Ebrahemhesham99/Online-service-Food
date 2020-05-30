@@ -228,10 +228,10 @@ public class Customerupdate extends javax.swing.JFrame {
         // TODO add your handling code here:
    
         customer customer=new customer();
-      boolean a= customer.update_profile(jTextField4.getText(), jTextField6.getText(), jTextField5.getText(), jTextField7.getText(), "Male", ABORT);
+      boolean a= customer.update_profile(jTextField4.getText(), jTextField6.getText(), jTextField5.getText(), jTextField7.getText(), "Male", Integer.parseInt(jTextField8.getText()));
        if(a == true)
        {
-                customer.update_profile(jTextField4.getText(), jTextField6.getText(), jTextField5.getText(), jTextField7.getText(), "Male", ABORT);
+               customer.update_profile(jTextField4.getText(), jTextField6.getText(), jTextField5.getText(), jTextField7.getText(), "Male", Integer.parseInt(jTextField8.getText()));
                 JOptionPane.showMessageDialog(null,"Updated successfully!");
 
        }
