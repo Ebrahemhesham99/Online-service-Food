@@ -6,8 +6,18 @@
 package restaurant.test;
 
 public class admin {
-    
-      private DBmanager dbManager = DBmanager.createInstance();
+   
+     private DBmanager dbManager = DBmanager.createInstance();
+     private static admin instance;
+     
+     public static admin getInstance(){
+     if(instance==null){
+     instance= new admin();
+     }
+         return instance;
+     
+     }
+     
     
       
       public boolean update_menu(String name,String price,String  id){
