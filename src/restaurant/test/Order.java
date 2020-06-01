@@ -41,5 +41,25 @@ public class Order {
         return reciept;
     }
     private double sum;
+    public void addToCard(String itemName , int amount )
+    {  
+        double total_price = 0.0;
+        try{
+        int x ; // get price from db
+            x = Integer.parseInt(dbManager.getItemPrice(itemName));
+        sum = amount * x;
+        total_price += sum; 
+        card[i]=total_price;
+        reciept[i][0]=itemName; // get item name from db
+        reciept[i][1]=String.valueOf(amount);
+        i++;
+       // r.addTrans(itemCode, total_price);
+        }
+        catch(NumberFormatException e)
+        {
+            System.out.print("Number format exception");
+        }
+        
+    }  
    
 }
