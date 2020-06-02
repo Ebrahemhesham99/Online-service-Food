@@ -61,5 +61,15 @@ public class Order {
         }
         
     }  
+    public double Buy(Order o)
+    {  
+       double total = 0;
+       double []card= o.getCard();
+       for (int i=0;i<card.length;i++)
+       {
+           total+=card[i];
+       }
+       return total;
+    }
    
 }
