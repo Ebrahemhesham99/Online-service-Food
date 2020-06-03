@@ -17,7 +17,7 @@ import restaurant.test.Item;
      * @author DELL
      */
     public class menu extends javax.swing.JFrame {
-
+Order or=new Order();
 
  List<Item> array = new ArrayList<>();
     int i=0;
@@ -186,7 +186,15 @@ import restaurant.test.Item;
         private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {                                     
 
 
-
+ int column = 0;
+        int row = jTable1.getSelectedRow();
+        String value = jTable1.getModel().getValueAt(row, column).toString();
+        
+         add mn=new add(value,or);
+         mn.setVisible(true);
+        mn.pack();
+        mn.setLocationRelativeTo(null);
+       
         }                                    
 
         private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {                                      
