@@ -1,10 +1,14 @@
+package gui;
 
+
+import gui.add;
     import java.util.ArrayList;
     import java.util.List;
     import javax.swing.JFrame;
     import javax.swing.table.DefaultTableModel;
 import restaurant.test.DBmanager;
 import restaurant.test.Item;
+import restaurant.test.Order;
 
     /*
      * To change this license header, choose License Headers in Project Properties.
@@ -199,7 +203,24 @@ Order or=new Order();
 
         private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {                                      
 
-
+ payment mn=new  payment(or.Buy(or),or.getReciept());
+         mn.setVisible(true);
+        mn.pack();
+        mn.setLocationRelativeTo(null);
+        mn.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.dispose();
+        
+        
+        
+        int i=0;
+       double a= or.Buy(or);
+        String array[][]=or.getReciept();
+        while (i<array.length&&array[i][0]!=null)
+        {
+            System.out.println("Item Name : " + array[i][0] +"     "+ "Amount :" + array[i][1]);
+           i++;
+        }
+        System.out.println("Total Price: "+ a);
 
         }                                     
 
