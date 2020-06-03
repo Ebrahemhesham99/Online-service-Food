@@ -185,14 +185,7 @@ public class payment extends javax.swing.JFrame {
        
     }//GEN-LAST:event_jButton4ActionPerformed
 
-    private void jButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseClicked
-         
-        
-        
-        
-        
-        
-    }//GEN-LAST:event_jButton5MouseClicked
+    
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
       
