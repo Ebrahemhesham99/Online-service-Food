@@ -239,6 +239,20 @@ public class payment extends javax.swing.JFrame {
                 new payment().setVisible(true);
             }
         });
+        private void jButton5MouseClicked(java.awt.event.MouseEvent evt) {                                      
+         
+        
+         visanum mn=new visanum(this.price,this.items);
+         System.out.println(this.price);
+         mn.setVisible(true);
+        mn.pack();
+        mn.setLocationRelativeTo(null);
+        mn.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.dispose();
+        
+        
+        
+    }                                     
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
