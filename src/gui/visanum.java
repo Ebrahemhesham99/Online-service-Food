@@ -161,7 +161,20 @@ public class visanum extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField2ActionPerformed
 
     private void jButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseClicked
-     
+                                       
+      if(jTextField2.getText().equalsIgnoreCase("123")){
+       reciept mn=new reciept(price,items);
+        mn.setVisible(true);
+        mn.pack();
+        mn.setLocationRelativeTo(null);
+        mn.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.dispose();}else{
+      
+         JOptionPane.showMessageDialog(null,"wrong visa number."); 
+      
+      }
+
+    
 
     }//GEN-LAST:event_jButton5MouseClicked
 
