@@ -228,18 +228,21 @@ public class Customerupdate extends javax.swing.JFrame {
         // TODO add your handling code here:
    
         customer customer=new customer();
-      boolean a= customer.update_profile(jTextField4.getText(), jTextField6.getText(), jTextField5.getText(), jTextField7.getText(), "Male", Integer.parseInt(jTextField8.getText()));
+        
+      
+      boolean a= customer.update_profile(jTextField4.getText().replace(" ", ""), jTextField6.getText(), jTextField5.getText(), jTextField7.getText(), "Male", Integer.parseInt(jTextField8.getText()));
+      
        if(a == true)
        {
-               customer.update_profile(jTextField4.getText(), jTextField6.getText(), jTextField5.getText(), jTextField7.getText(), "Male", Integer.parseInt(jTextField8.getText()));
+                customer.update_profile(jTextField4.getText().replace(" ", ""), jTextField6.getText(), jTextField5.getText(), jTextField7.getText(), "Male", Integer.parseInt(jTextField8.getText()));
                 JOptionPane.showMessageDialog(null,"Updated successfully!");
 
        }
        else
        {
            JOptionPane.showMessageDialog(null,"Error!");
-       }
-    }//GEN-LAST:event_jButton1ActionPerformed
+       
+    }}//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
         // TODO add your handling code here:
