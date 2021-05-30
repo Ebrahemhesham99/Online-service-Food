@@ -12,9 +12,7 @@ import restaurant.test.admin;
 
 public class Additemid extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Additemid
-     */
+    
     public Additemid() {
         initComponents();
     }
@@ -159,7 +157,7 @@ public class Additemid extends javax.swing.JFrame {
       boolean a= admin.add_item(NameField.getText(),PriceField.getText());
        if(a == true)
        {
-                admin.add_item(NameField.getText(),PriceField.getText());
+                
                 JOptionPane.showMessageDialog(null,"Added successfully!");
 
        }
